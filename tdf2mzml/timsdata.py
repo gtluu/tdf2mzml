@@ -7,11 +7,12 @@ import os, sys
 from ctypes import *
 
 if sys.platform[:5] == "win32":
-    libname = "timsdata.dll"
+    libname = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'timsdata.dll')
 elif sys.platform[:5] == "linux":
-    libname = "libtimsdata.so"
+    libname = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'libtimsdata.so')
 else:
     raise Exception("Unsupported platform.")
+print(libname)
     
 dll = cdll.LoadLibrary(libname)
 dll.tims_open.argtypes = [ c_char_p, c_uint32 ]
