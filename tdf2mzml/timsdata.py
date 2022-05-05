@@ -7,9 +7,9 @@ import os, sys
 from ctypes import *
 
 if sys.platform[:5] == "win32":
-    libname = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'timsdata.dll')
+    libname = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'timsdata.dll')
 elif sys.platform[:5] == "linux":
-    libname = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'libtimsdata.so')
+    libname = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'libtimsdata.so')
 else:
     raise Exception("Unsupported platform.")
     
