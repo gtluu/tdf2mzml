@@ -11,9 +11,9 @@ ENV PATH /tdf2mzml:$PATH
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/tdf2mzml
 
 ADD requirements.txt /tdf2mzml/requirements.txt
-ADD tdf2mzml.py /tdf2mzml/tdf2mzml.py 
-ADD timsdata.py /tdf2mzml/timsdata.py
-ADD libtimsdata.so /tdf2mzml/libtimsdata.so
+ADD tdf2mzml/tdf2mzml.py /tdf2mzml/tdf2mzml.py
+ADD tdf2mzml/timsdata.py /tdf2mzml/timsdata.py
+ADD tdf2mzml/libtimsdata.so /tdf2mzml/libtimsdata.so
 
 RUN apt-get update && apt-get install python3-pip procps -y \
     && rm -rf /var/lib/apt/lists/*
