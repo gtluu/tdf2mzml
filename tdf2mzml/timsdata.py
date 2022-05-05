@@ -12,7 +12,6 @@ elif sys.platform[:5] == "linux":
     libname = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'libtimsdata.so')
 else:
     raise Exception("Unsupported platform.")
-print(libname)
     
 dll = cdll.LoadLibrary(libname)
 dll.tims_open.argtypes = [ c_char_p, c_uint32 ]
