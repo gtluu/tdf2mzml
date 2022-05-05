@@ -14,4 +14,4 @@ import sys
 import time
 
 from tdf2mzml.timsdata import *
-from tdf2mzml.tdf2mzml import *
+from tdf2mzml import *
